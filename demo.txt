@@ -3,3 +3,8 @@ hiii i am kaushik jagani . and i am web backend devloper.
 
 i have add new line for check what i update.
 
+git diff comare working dir with staged area.
+
+after add write new line for modified dir.
+
+
