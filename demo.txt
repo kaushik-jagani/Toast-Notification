@@ -8,3 +8,6 @@ git diff comare working dir with staged area.
 after add write new line for modified dir.
 
 
+
+
+
