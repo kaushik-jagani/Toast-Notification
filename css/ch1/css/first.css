@@ -1,0 +1,14 @@
+*{
+    background-color : palevioletred;
+}
+h1{
+    font-size :  78px;
+    color :rgb(112, 4, 112);
+    font-family: fantasy ;
+}
+
+p{
+    font-size : 20px;
+    color :rgb(17, 255, 0);
+    font-family :Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif\ ;
+} 
