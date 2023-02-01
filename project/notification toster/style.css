@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Itim&display=swap');
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Itim', cursive;
+}
+
+:root{
+    /* --dark : #34495e; */
+    --dark : #bff9df;
+    --light : #ffffff;
+    --success : #0abf30;
+    --error : #e24d4c;
+    --warning: #e9bd0c;
+    --info : #3498db;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    background: var(--dark);
+}
+
+.notifications{
+    position: fixed;
+    top : 30px;
+    right : 20px;
+}
+
+.notifications :where(.toast, .column){
+    display : flex;
+    align-items : center;
+}
+
+.notifications .toast{
+    width: 400px;
+    position:relative;
+    list-style: none;
+    border-radius: 5px;
+    padding:16px 17px;
+    margin-bottom: 10px;
+    background: var(--light);
+    justify-content:space-between;
+    animation: show_toast 0.3s ease forwards;
+}
+
+@keyframes show_toast{
+    0% {
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-5%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+.notifications .toast.hide{
+    animation: hide_toast 0.3s ease forwards;
+}
+
+@keyframes hide_toast{
+    0% {
+        transform: translateX(-10px);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    80%{
+        transform: translateX(-5%);
+    }
+    100%{
+        transform: translateX(calc(100% + 20px));
+    }
+}
+.toast::before{
+    position: absolute;
+    content:"";
+    height:3px;
+    width:100%;
+    bottom : 0px;
+    left : 0px;
+    background: red;
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress{
+    100%{
+        width:0%;
+    }
+}
+.toast.success::before, .btn#success{
+    background: var(--success);
+}
+.toast.error::before, .btn#error{
+    background: var(--error);
+}
+.toast.warning::before, .btn#warning{
+    background: var(--warning);
+}
+.toast.info::before, .btn#info{
+    background: var(--info);
+}
+.toast .column i{
+    font-size:1.75rem;
+}
+
+.toast.success .column{
+    color: var(--success);
+}
+.toast.error .column{
+    color: var(--error);
+}
+.toast.warning .column{
+    color: var(--warning);
+}
+.toast.info .column{
+    color: var(--info);
+}
+
+.toast .column span{
+    font-size:1.07rem;
+    margin-left : 12px;
+}
+
+.toast i:last-child{
+    color:#aeb0d7;
+    cursor: pointer;
+}
+
+.toast i:last-child:hover{
+    color : var(--dark);
+}
+
+.buttons .btn{
+    border : none;
+    outline : none;
+    color:#fff;
+    cursor: pointer;
+    margin:0 5px;
+    font-size:1.2rem;
+    padding : 10px 20px;
+    border-radius : 4px;
+}
