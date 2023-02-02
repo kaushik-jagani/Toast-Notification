@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/8956/8956397.png" type="image/x-icon">
     <title>Weather forcasting</title>
 </head>
+
 <body>
-     <div class="container">
+    <div class="container">
         <div class="current-info">
             <div class="date-container">
                 <div class="time" id="time">
@@ -19,68 +22,77 @@
                 </div>
 
                 <div class="other" id="current-weather-items">
-                    <div class="weather-item">
-                        <div>Humadity</div>
-                        <div>98.2%</div>
-                    </div>
-                    <div class="weather-item">
-                        <div>Presure</div>
-                        <div>98.2%</div>
-                    </div>
-                    <div class="weather-item">
-                        <div>Wind Speed</div>
-                        <div>98.2%</div>
-                    </div>
-                    
+
+
                 </div>
             </div>
 
-            <div class="place-container">
-                <div class="time-zone" id="time-zone">Asia / kolkata</div>
-                <div class="country" id="country">India</div>
+            <div class="adjust">
+                <div class="place-container">
+                    <div class="time-zone" id="time-zone">Asia / kolkata</div>
+                    <div class="country" id="country">India</div>
+                </div>
+                <div class="search-container">
+                    <form action="" class="search-bar">
+            
+                        <input type="text" placeholder="Search" name="q" id="search">
+                        <button type="submit" id="btn"><img src="https://cdn-icons-png.flaticon.com/512/3811/3811704.png" width="15px"
+                                height="15px"></button>
+            
+                    </form>
+                </div>
             </div>
-        </div>  
-     </div>
+       
+        </div>
+    </div>
 
-     <div class="future-forecast">
+    <div class="future-forecast">
         <div class="today" id="current-temp">
-            <img src="" alt="weather icon" class="w-icon">
-            <div class="day">monday</div>
-            <div class="temp">Night - 25.6&#176; C</div>
-            <div class="temp">Day - 35.6&#176; C</div>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">monday</div>
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
         </div>
 
         <div class="weather-forecast" id="weather-forecast">
             <div class="weather-forecast-item">
                 <div class="day">Tueday</div>
-                <img src="" alt="weather icon" class="w-icon">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">Night - 25.6&#176; C</div>
                 <div class="temp">Day - 35.6&#176; C</div>
             </div>
             <div class="weather-forecast-item">
                 <div class="day">Wedday</div>
-                <img src="" alt="weather icon" class="w-icon">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">Night - 25.6&#176; C</div>
                 <div class="temp">Day - 35.6&#176; C</div>
             </div>
             <div class="weather-forecast-item">
                 <div class="day">Thurday</div>
-                <img src="" alt="weather icon" class="w-icon">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">Night - 25.6&#176; C</div>
                 <div class="temp">Day - 35.6&#176; C</div>
             </div>
             <div class="weather-forecast-item">
                 <div class="day">friday</div>
-                <img src="" alt="weather icon" class="w-icon">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">Night - 25.6&#176; C</div>
                 <div class="temp">Day - 35.6&#176; C</div>
             </div>
             <div class="weather-forecast-item">
                 <div class="day">Satday</div>
-                <img src="" alt="weather icon" class="w-icon">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">Night - 25.6&#176; C</div>
                 <div class="temp">Day - 35.6&#176; C</div>
             </div>
+            <!-- <div class="weather-forecast-item">
+                <div class="day">Sunday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div> -->
             <!-- <div class="weather-forecast-item">
                 <div class="day">Sunday</div>
                 <img src="" alt="weather icon" class="w-icon">
@@ -90,6 +102,8 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

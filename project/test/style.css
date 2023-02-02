@@ -1,0 +1,23 @@
+.search-container{
+    /* width : 100%; */
+    /* min-height: 100vh; */
+    /* padding: 5%; */
+    background-color: bisque;
+    display: flex;
+    align-items: space-between;
+    justify-content: right;
+}
+
+.search-bar {
+   width : 100%;
+   max-width: 500px; 
+   display: flex;
+   align-items: center;
+   border-radius: 60px;
+   padding: 10px 20px;
+}
+
+.search-bar input{
+    background: rgba(39, 77, 45, 0.4);
+    flex: 1;
+}
